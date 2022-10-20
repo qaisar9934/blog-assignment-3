@@ -28,6 +28,14 @@ app.use(
     saveUninitialized: false,
   })
 );
+app.use(
+  session({
+    cookie: { maxAge: 60000 },
+    secret: "blog-1016",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
 // to able to send flash messages like 'User registered successfully'
 app.use(flash());

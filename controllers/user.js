@@ -223,7 +223,7 @@ const register = (req, res, next) => {
     res.render("wellcome", { user: first_name + " " + last_name });
   }
 
-  // res.render("wellcome", { user: first_name + " " + last_name });
+  // res.render("wellcome", { user: first_name + " " + last_name }); 123
 };
 
 const article = (req, res, next) => {
@@ -232,10 +232,10 @@ const article = (req, res, next) => {
 
 //export controller functions
 module.exports = {
-  home,
-  loginView,
-  login,
-  registerView,
-  register,
-  article,
+  home3,
+  loginView3,
+  login3,
+  registerView3,
+  register3,
+  article3,
 };
