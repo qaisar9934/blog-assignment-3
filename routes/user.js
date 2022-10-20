@@ -9,4 +9,4 @@ router.get("/register", userController.registerView);
 router.post("/register", userController.register);
 router.get("/article/:id", userController.article);
 
-module.exports = router;
+module.exports = router; // export

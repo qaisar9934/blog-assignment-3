@@ -15,7 +15,7 @@ const session = require("express-session");
 
 app.use(express.static(__dirname + "/public"));
 
-// Register `hbs.engine` with the Express app.
+// Register `hbs.engine` with the Express app. 123
 app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views/"));
