@@ -327,6 +327,7 @@
                     class="form-control"
                     value="{{{form.city}}}"
                   />
+                  <p class="text-danger font-weight-bold">{{{city_error}}}</p>
                 </div>
                 <div class="col-6">
                   <input
@@ -336,6 +337,9 @@
                     class="form-control"
                     value="{{{form.postcode}}}"
                   />
+                  <p
+                    class="text-danger font-weight-bold"
+                  >{{{postcode_error}}}</p>
                 </div>
               </div>
               <br />
@@ -349,6 +353,9 @@
                     class="form-control"
                     value="{{{form.country}}}"
                   />
+                  <p
+                    class="text-danger font-weight-bold"
+                  >{{{country_error}}}</p>
                 </div>
               </div>
               <br />
@@ -377,7 +384,11 @@
                     name="password"
                     placeholder="Password"
                     class="form-control"
+                    value="{{{form.password}}}"
                   />
+                  <p
+                    class="text-danger font-weight-bold"
+                  >{{{password_error}}}</p>
                 </div>
 
                 <div class="col-6">
@@ -387,6 +398,9 @@
                     placeholder="Confirm Password"
                     class="form-control"
                   />
+                  <p
+                    class="text-danger font-weight-bold"
+                  >{{{confirm_password_error}}}</p>
                 </div>
               </div>
             </fieldset>
