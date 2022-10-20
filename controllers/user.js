@@ -45,6 +45,7 @@ const register = (req, res, next) => {
   let postcode = req.body.postcode.trim();
   let country = req.body.country.trim();
   let tax_id = req.body.tax_id.trim();
+  let username = req.body.username.trim();
   let password = req.body.password.trim();
   let confirm_password = req.body.confirm_password.trim();
   let error = false;
@@ -166,6 +167,23 @@ const register = (req, res, next) => {
     req.flash("country_error", "Country name should not exceed 12 characters!");
   }
 
+  if (username == "") {
+    error = true;
+    req.flash("username_error", "Username field is required!");
+  } else if (!/^[a-zA-Z]([._-]?[a-zA-Z0-9]+)*$/.test(username)) {
+    error = true;
+    req.flash("username_error", "Username must have letters and numbers");
+  } else if (username.length < 6) {
+    error = true;
+    req.flash(
+      "username_error",
+      "Username should be more then 6 characters long!"
+    );
+  } else if (username.length > 12) {
+    error = true;
+    req.flash("username_error", "Username should not exceed 12 characters!");
+  }
+
   if (password == "") {
     error = true;
     req.flash("password_error", "Password field is required!");
@@ -204,6 +222,7 @@ const register = (req, res, next) => {
       country_error: req.flash("country_error"),
       password_error: req.flash("password_error"),
       confirm_password_error: req.flash("confirm_password_error"),
+      username_error: req.flash("username_error"),
       form: {
         first_name,
         last_name,
@@ -216,6 +235,7 @@ const register = (req, res, next) => {
         postcode,
         country,
         tax_id,
+        username,
         password,
       },
     });

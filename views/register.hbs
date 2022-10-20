@@ -378,6 +378,21 @@
               <legend>Account Security:</legend>
 
               <div class="row">
+                <div class="col-12">
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    class="form-control"
+                    value="{{{form.username}}}"
+                  />
+                  <p
+                    class="text-danger font-weight-bold"
+                  >{{{username_error}}}</p>
+                </div>
+              </div>
+
+              <div class="row">
                 <div class="col-6">
                   <input
                     type="password"
