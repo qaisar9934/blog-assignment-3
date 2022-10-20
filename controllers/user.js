@@ -232,10 +232,10 @@ const article = (req, res, next) => {
 
 //export controller functions
 module.exports = {
-  home3,
-  loginView3,
-  login3,
-  registerView3,
-  register3,
-  article3,
+  home,
+  loginView,
+  login,
+  registerView,
+  register,
+  article,
 };

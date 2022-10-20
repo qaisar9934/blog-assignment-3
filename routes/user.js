@@ -8,8 +8,5 @@ router.post("/login", userController.login);
 router.get("/register", userController.registerView);
 router.post("/register", userController.register);
 router.get("/article/:id", userController.article);
-router.get("/article/:id", userController.article);
-router.get("/article/:id", userController.article);
-router.get("/article/:id", userController.article);
 
-module.exports = router; // export
+module.exports = router;

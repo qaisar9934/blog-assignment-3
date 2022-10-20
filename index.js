@@ -15,19 +15,11 @@ const session = require("express-session");
 
 app.use(express.static(__dirname + "/public"));
 
-// Register `hbs.engine` with the Express app. 123
+// Register `hbs.engine` with the Express app.
 app.engine("hbs", hbs.engine);
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views/"));
 
-app.use(
-  session({
-    cookie: { maxAge: 60000 },
-    secret: "blog-1016",
-    resave: false,
-    saveUninitialized: false,
-  })
-);
 app.use(
   session({
     cookie: { maxAge: 60000 },
